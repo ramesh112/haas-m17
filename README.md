@@ -103,4 +103,53 @@ High‑level observations (you can adjust numbers if you logged them explicitly)
 ## Repository Structure
 
 A suggested structure:
+├── README.md # Project documentation
+├── prompt_III.ipynb # Main analysis notebook
+├── data/
+│ └── bank-additional-full.csv
+├── images/ # (Optional) Saved plots from EDA / modeling
+│ └── *.png
+└── requirements.txt # Python dependencies (optional)
+
+
+## Setup and Installation
+
+1. Create and activate a virtual environment (recommended):
+
+python -m venv venv
+source venv/bin/activate # macOS / Linux
+venv\Scripts\activate # Windows
+
+
+2. Install dependencies (either from `requirements.txt` if you create one, or minimally):
+
+pip install pandas numpy matplotlib seaborn plotly scikit-learn
+
+
+3. Ensure the dataset file `bank-additional-full.csv` is located under `data/` at the project root.
+
+## How to Run
+
+1. Start Jupyter:
+
+jupyter notebook
+
+
+2. Open `prompt_III.ipynb`.
+3. Run all cells in order:
+- Data loading and exploration
+- Feature engineering and preprocessing
+- Baseline model training and evaluation
+- Model comparison and tuning experiments
+
+## Future Improvements
+
+- Add cross‑validation and more robust model selection.
+- Try additional models (Random Forest, Gradient Boosting, XGBoost, etc.).
+- Implement custom decision thresholds and ROC/PR curve analysis.
+- Package the best model into a simple API or CLI for batch scoring.
+
+## License
+
+Specify a license here (e.g., MIT, Apache 2.0) or “All rights reserved” depending on how you intend to share this work.
 
